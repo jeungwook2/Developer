@@ -1,0 +1,91 @@
+.outer{
+    border: 5px dashed red;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: end; */
+    flex-wrap: wrap;
+    align-content: center; /* 꼬챙이 간격 조절 */
+}
+
+.inner{
+    width: 150px;
+    height: 150px;
+    border: 3px dashed blue;
+    box-sizing: border-box;
+}
+
+.inner:nth-child(7){
+    background-color: red;
+    align-self: center;
+    order: -1; /*오더값에 따라 순서 설정, 보이는 순서만 바뀜*/
+}
+
+#test{
+    background-color: gray;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#test>div{
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 20px;
+}
+
+.c{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.a{
+    width: 500px;
+    height: 500px;
+    border: 5px dashed red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.b{
+    width: 100px;
+    height: 100px;
+    border: 3px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.c{
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#practice{
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+#practice>div{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}

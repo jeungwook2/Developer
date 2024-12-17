@@ -1,0 +1,18 @@
+table {
+    border:3px solid blue;
+}
+#result {
+    height:50px;
+    font-size:2em;
+    font-weight:bold;
+    text-align:right;
+    border:1px solid black;
+    width:210px;
+    overflow:hidden;
+}
+button {
+    font-size:1.5em;
+    font-weight:bold;
+    width:50px;
+    height:50px;
+}

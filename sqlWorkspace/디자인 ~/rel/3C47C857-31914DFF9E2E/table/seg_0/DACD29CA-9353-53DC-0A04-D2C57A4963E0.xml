@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DACD29CA-9353-53DC-0A04-D2C57A4963E0" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="DEPARTMENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>E70E5D9D-74C3-3F4A-CC07-A847C58DC514</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="055E6254-C661-B7F1-82AB-C4D95A8D5B20">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[부서코드]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>4E3394A0-7F60-1005-A50F-B023BD99CCF0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="4DC4AFE1-995A-E977-8EBD-8F2CDA9D7853">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[부서명]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>06A1F367-168A-9919-EE82-48029EDE36C2</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0BC8F086-7065-D484-8D55-6D439B33B2E5" name="PK_DEPARTMENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>A5532265-54A5-9051-84FE-CB2667DA9ECF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="055E6254-C661-B7F1-82AB-C4D95A8D5B20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EDAFC6E-81B8-A310-ED66-24E217A3DB8E" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="PK_DEPARTMENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>02C983C4-708A-F21F-779B-788AF0B198A9</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="055E6254-C661-B7F1-82AB-C4D95A8D5B20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

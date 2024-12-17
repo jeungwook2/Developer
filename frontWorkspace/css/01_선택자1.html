@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자1</title>
+    <!--  
+        내부 스타일 시트
+            현재 문서의 <style> 태그 내부에 스타일 정보를 저장하는 방법 (같은 문서 내에 스타일 존재)
+    -->
+    <style>
+        /* 선택자{ 스타일;스타일;스타일; } */
+        h1 {
+            background-color: red;
+        }
+
+        li {
+            background-color: gray;
+        }
+
+        #x1 {
+            color: violet;
+        
+        }
+        #x2 {
+            color: green;
+        }
+
+        .abc {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .hello {
+            border: 10px solid black;
+        }
+        </style>
+</head>
+<body>
+    
+    <h1>선택자1</h1>
+    <!--  
+        선택자란?
+        특정 HTML 요소를 선택할 때 사용하는 기능으로,
+        요소를 선택하여 원하는 스타일과 기능을 적용할 수 있다.
+    -->
+
+    <hr>
+
+    <h2>1. 모든 요소 선택자</h2>
+    <!--  
+        HTML 문서 안의 모든 태그를 선택할 때 전체 선택자를 사용한다.
+    -->
+    <pre>
+        * 선택자{
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            ...
+        }
+    </pre>
+
+    <h2>2. 태그 선택자</h2>
+    <!-- HTML 문서 내에 같은 태그를 모두 선택할 때 사용한다. -->
+     <pre>
+        태그명{
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            ...
+        }
+     </pre>
+
+     <h2>3. 아이디 선택자</h2>
+    <!--  
+        HTML 문서 내에 해당하는 아이디의 속성값을 가진 태그만 선택할 때 사용한다.
+    -->
+     <pre>
+        #아이디{
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            ...
+        }
+     </pre>
+
+     <h2>4. 클래스 선택자</h2>
+     <!-- 
+        HTML 문서 내에 여러 개의 태그를 동일한 클래스명으로 지정하여 선택할 때 사용한다.
+     -->
+    <pre>
+        .클래스{
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            스타일명 : 스타일값 ;
+            ...
+        }
+    </pre>
+
+    <hr>
+
+    <ul>
+        <li id="x1" class="abc red">1번째요소</li>
+        <li id="x2" class="abc red">2번째요소</li>
+        <li id="x3" class="abc red hello">3번째요소</li>
+        <li id="x4" class="abc blue">4번째요소</li>
+        <li id="x5" class="abc blue">5번째요소</li>
+    </ul>
+</body>
+</html>

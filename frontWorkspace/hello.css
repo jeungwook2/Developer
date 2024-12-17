@@ -1,0 +1,260 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+
+
+    
+}
+
+.sidebar {
+    width: 15%;
+    background-color: #447dff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+
+.sidebar ul li {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar ul li:hover {
+    background-color: #3668cc;
+}
+
+.submenu-content {
+    display: none;
+    background-color: #5591ff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: calc(100% - 40px);
+}
+
+.submenu-content p {
+    margin: 5px 0;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.submenu-content p:hover {
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #ECF2FD;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+   
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.144);
+    height: 70px;
+    
+}
+
+.button {
+    background-color: #447dff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3668cc;
+}
+
+.image-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.content-area {
+    display: grid;
+    grid-template-rows: 0.5fr 0.8fr 7.2fr 1fr;
+    flex: 1;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.144);
+}
+.top-content-area{
+    display: grid;
+    grid-template-columns: 1.5fr 4fr ;
+    justify-content: center; /* 전체 그리드 정렬 (선택 사항) */
+    justify-items: center;  /* 각 칸 안의 수평 정렬 */
+    align-items: center;    /* 각 칸 안의 수직 정렬 */
+    gap: 10px;   
+}
+.middle-content-area{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-content-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+    justify-content: center; /* 전체 그리드 정렬 (선택 사항) */
+    justify-items: center;  /* 각 칸 안의 수평 정렬 */
+    align-items: center;    /* 각 칸 안의 수직 정렬 */
+    gap: 10px;   
+}
+.modal-small{
+    display: grid;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr;
+}
+.test
+{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.top-title-area{
+    margin-left: 20px;
+    background-color: #F5F5F5;
+    width: 2100px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.144);
+    display: flex;
+    justify-items: center;
+    
+
+    
+}
+.top-title-area-form{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 0.7fr 0.7fr 1.3fr 0.5fr ;
+   
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    font-size: 2rem; 
+  
+   
+}
+
+
+.search-bar > button{
+    width: 160px;
+    height: 45px;
+    border-radius: 20px;
+    
+}
+.search-bar select{
+    padding-left: 10px;
+    width: 250px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 22px;
+    
+}
+#longbar{
+    padding-left: 15px;
+    width: 500px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+
+.search-bar input[name = year]{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 18px;
+}
+.search-bar input[name = month]{
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 18px;
+  
+}
+.search-bar input[name = day]{
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 18px;
+    
+  
+}
+
+
+#longbar:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+.search-bar select:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+

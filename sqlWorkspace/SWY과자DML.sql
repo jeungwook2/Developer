@@ -1,0 +1,40 @@
+--과자 관리 프로그램
+
+
+DROP SEQUENCE SEQ_SNACK;
+CREATE SEQUENCE SEQ_SNACK NOCACHE NOCYCLE;
+
+DROP TABLE SNACK CASCADE CONSTRAINTS;
+CREATE TABLE SNACK(
+    NO                    NUMBER           PRIMARY KEY
+    ,NAME                VARCHAR2(100)      NOT NULL
+    ,PRICE                NUMBER            NOT NULL
+    ,BRAND               VARCHAR2(100)      NOT NULL
+    ,EXPIRATION_DATE     TIMESTAMP DEFAULT   SYSDATE
+);
+--과자 등록
+INSERT INTO SNACK(
+    NO
+    ,NAME
+    ,PRICE
+    ,BRAND
+    ,EXPIRATION_DATE
+)
+VALUES(
+    SEQ_SNACK.NEXTVAL
+    ,'새우깡'
+    ,2000
+    ,'농심'
+    ,'2033-12-05'
+);
+
+ROLLBACK;
+--과자 상세조회
+SELECT 
+    NO
+    ,NAME
+    ,PRICE
+    ,BRAND
+    ,EXPIRATION_DATE
+    FROM SNACK
+WHERE NO = 2;

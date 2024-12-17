@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="VACATION_LOG" directorySegmentName="seg_0" id="53D2FEBB-7AC9-C542-7276-81A5B9AA495F">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<schemaObject>C21B8C3C-7C43-F5C3-9493-213EEEE9B94D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1B034058-E22D-803A-C274-77AE8C52157A</segment>
+<tableSpace>4C34B22C-4EDD-E88A-48A8-20267F0A5101</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="REASON" id="2617F61C-C7B6-B16C-8E13-4E99A89B1E88">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MODIFY_DATE" id="262D48F2-B362-680B-F98C-8DAC21786F48">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CODE" id="49F595F9-F2CE-E1C4-DBD5-AF395006FDB3">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="THISDATE" id="4BAF3F75-CB9A-ABA8-DF16-3FFB2962B8EC">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMP_NO" id="5394D112-E6C0-4439-A3FE-7F5703470E97">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENROLL_DATE" id="5E237703-3332-7361-913C-C9D7E24EB4E2">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<defaultValue>SYSDATE</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="DEL_YN" id="87A7417A-24CC-E331-D91F-8867D0E9FAFB">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<defaultValue>&apos;N&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="NO" id="C8E6BBFC-C6B7-BA71-AB77-5600FAD92A32">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_VACATION_LOG" id="AA076CCC-208C-198A-2A68-3CC11BE7C3ED">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<schemaObject>C21B8C3C-7C43-F5C3-9493-213EEEE9B94D</schemaObject>
+<segment>31B36BFA-EDF3-2C4D-CF2C-7FF6C3A2DF75</segment>
+<tableSpace>4C34B22C-4EDD-E88A-48A8-20267F0A5101</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_EMPLOYEE_TO_VACATION_LOG_1" id="46B6FC9D-69C2-3F58-090E-7BD6DE121819">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_VACATION_TYPE_TO_VACATION_LOG_1" id="A5FE2D75-A7EA-2D15-46B8-D23DC34F17E1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_VACATION_LOG" id="1A8DC01D-D9CC-6E5D-415A-3BF24507C2C0">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<segment>31B36BFA-EDF3-2C4D-CF2C-7FF6C3A2DF75</segment>
+<tableSpace>4C34B22C-4EDD-E88A-48A8-20267F0A5101</tableSpace>
+<existingIndex>AA076CCC-208C-198A-2A68-3CC11BE7C3ED</existingIndex>
+<indexSegment>31B36BFA-EDF3-2C4D-CF2C-7FF6C3A2DF75</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

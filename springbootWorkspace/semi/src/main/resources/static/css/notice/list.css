@@ -1,0 +1,17 @@
+main .table-area tbody tr:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+.checkbox-td{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.checkbox-td input{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,24 @@
+header{
+    width: 100%;
+    height: 150px;
+
+    display: grid;
+    
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+
+
+}
+header > div.logo{
+    background-image: url("/img/facebook.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header > div.logo:hover{
+    cursor: pointer;
+}
+img{
+    height: 100px;
+    width: 100px;
+}

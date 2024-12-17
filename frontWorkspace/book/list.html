@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>리스트</h1>
+    <div id="list"></div>
+</body>
+</html>
+<script>
+
+fetch("http://127.0.0.1:8888/book/list",{
+    method:"GET",
+}).then((response)=>{
+    console.log("통신성공");
+     return response.json();
+}).then((result)=>{
+    console.log(result);   
+}).catch(()=>{
+    console.log("통신실패");  
+})
+;
+
+
+    /*
+    $.ajax({
+        url:"http://127.0.0.1:8888/book/list",
+        method:"GET",
+        success:function(data){
+            console.log("통신성공");
+            console.log(data);
+            const listTag =document.querySelector("#list");
+
+            for(let i = 0; i<data.length;i++){
+                const x = data[i];
+                const noTag=document.createElement("span");
+                noTag.textContent = x.no;
+                const titleTag=document.createElement("span");
+                titleTag.textContent = x.title;
+                const writerTag=document.createElement("span");
+                writerTag.textContent= x.writer;
+                const priceTag=document.createElement("span");
+                priceTag.textContent= x.price;
+                const publishedDateTag=document.createElement("span");
+                publishedDateTag.textContent= x.publishedDate;
+
+                
+                listTag.appendChild(noTag);
+                listTag.appendChild(titleTag);
+                listTag.appendChild(writerTag);
+                listTag.appendChild(publishedDateTag);
+            }
+            
+            
+        },
+        error:function(){
+            console.log("실패");
+        }
+    })
+    */
+</script>

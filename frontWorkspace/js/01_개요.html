@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요</title>
+    <script src="01_개요.js"></script>
+
+</head>
+<body>
+
+    <h1>개요</h1>
+
+    <hr>
+
+    <h2>자바스크립트</h2>
+    
+    <!--  
+        웹 브라우저에서 많이 사용되는 인터프리터 방식의 스크립트 언어(함수, 객체지향)
+            - 인터프리터 방식 : 컴파일 과정 없이 실행하면서 코드를 하나씩 읽어내는 방식이다. 
+            (코드에 문법에 오류가 있으면 실행 시점에 알 수 있다.)
+    -->
+
+    <h4>inline(인라인)</h4>
+    <!--  
+        태그 내에 직접 간단한 코드를 작성해서 실행하는 방법
+        자바스크립트 소스가 몇 줄 안되는 경우 inline 방식을 사용한다.
+    -->
+
+    <button onclick="console.log('ㅋㅋㅋ');">눌러보세요</button>
+
+    <h3>2. 데이터 입출력</h3>
+    <h4>1) 데이터 입력</h4>
+    <!--  
+        window.confirm()
+            - 어떤 질문에 대해 "예/아니오"의 결과를 얻을 때 사용한다.
+            - 확인 버튼과 취소 버튼이 나타나며 확인 버튼 클릭 시 true,
+                취소 버튼 클릭 시 false를 리턴한다.
+    -->
+
+    <script>
+        // x = confirm("성인인가요");
+        // console.log(x);
+
+        // x = prompt("이름이 뭐에요?");
+        // alert(x + " 님 환영합니다 ~ ^^");
+
+    </script>
+
+    
+    <!-- 
+        window.alert()
+        - 브라우저 화면상에 알림 창을 출력한다.
+        
+        console.log()
+        - 개발자 도구의 콘솔 화면에 출력하고자 할 때 사용한다. (디버깅 할 때 주로 사용한다.) 
+    -->
+   
+
+    <h3>3. HTML 요소에 접근하기</h3>
+    <h4>1) 아이디로 접근</h4>
+    <h4>2) 태그 명으로 접근</h4>
+    <h4>3) name으로 접근</h4>
+    <h4>4) class로 접근</h4>
+    <h4>5) querySelector로 접근</h4>
+
+    <input 
+        type="text" 
+        placeholder="아이디를 입력하세요" 
+        name="userId"
+        id="target"
+        class="abc"
+    >
+
+    <script>
+        // x = document.getElementById("target");
+        // x = document.getElementsByTagName("input");
+        // x = document.getElementsByName("userId");
+        // x = document.getElementsByClassName("abc");
+        x = document.querySelectorAll("input[name=userId]");
+        console.log(x[0]);
+    </script>
+
+</body>
+</html>

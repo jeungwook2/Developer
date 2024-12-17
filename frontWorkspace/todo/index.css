@@ -1,0 +1,17 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table td,
+table th{
+    border: 1px dashed black;
+}
+
+table th{
+    background-color: lightgray;
+}
+
+.text-strike{
+    text-decoration: line-through;
+}

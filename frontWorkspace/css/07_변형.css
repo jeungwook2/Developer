@@ -1,0 +1,38 @@
+#star:hover{
+    /* transform: translateX(100px);
+    transform: translateY(100px);
+    transform: translate(100px, 100px);
+    transform: scale(2, 0.5);
+    transform: rotate(30deg); */
+    transform: skew(30deg, 30deg);
+
+   
+}
+
+#star3:hover{
+
+    /* 3차원 변형 */
+    /* transform: perspective(300px) translateZ(100px);
+    transform: perspective(300px) translate3d(50px, 50px, 100px);
+    transform: perspective(300px) rotateZ(45deg);
+    transform: perspective(300px) rotate3d(1, 0, 1, 30deg); */
+
+    transform-origin: left top;
+    transform: rotate(30deg);
+
+}
+
+#smile:hover{
+        /* backface */
+        transform: rotateY(120deg);
+        backface-visibility: visible;
+}
+
+#insta{
+    width:  100px;
+    height: 100px;
+    background-color: gray;
+    /* border-top-left-radius: 30px; */
+    border-radius: 50px;
+    border: 2px solid green;
+}

@@ -1,0 +1,196 @@
+DROP TABLE VACATION_CNT;
+
+SELECT * FROM MEMBER;
+SELECT * FROM BOARD;
+
+UPDATE BOARD SET DEL_YN ='N';
+
+-- MEMBER
+DROP SEQUENCE SEQ_MEMBER;
+CREATE SEQUENCE SEQ_MEMBER NOCACHE NOCYCLE;
+
+DROP TABLE MEMBER CASCADE CONSTRAINTS;
+CREATE TABLE MEMBER(
+    NO              NUMBER          PRIMARY KEY
+    , ID            VARCHAR2(100)   NOT NULL UNIQUE
+    , PWD           VARCHAR2(100)   NOT NULL
+    , NICK          VARCHAR2(100)   NOT NULL
+    , ENROLL_DATE   TIMESTAMP       DEFAULT SYSDATE
+    , MODIFY_DATE   TIMESTAMP
+    , DEL_YN        CHAR(1)         DEFAULT 'N' CHECK (DEL_YN IN ('Y', 'N'))
+    , PROFILE VARCHAR2(1000)
+);
+
+-- BOARD
+DROP SEQUENCE SEQ_BOARD;
+CREATE SEQUENCE SEQ_BOARD NOCACHE NOCYCLE;
+
+DROP TABLE BOARD CASCADE CONSTRAINTS;
+CREATE TABLE BOARD(
+    NO              NUMBER          PRIMARY KEY
+    , TITLE         VARCHAR2(100)   NOT NULL
+    , CONTENT       VARCHAR2(100)   NOT NULL
+    , WRITER_NO     NUMBER          NOT NULL
+    , HIT           NUMBER          DEFAULT 0
+    , ENROLL_DATE   TIMESTAMP       DEFAULT SYSDATE
+    , MODIFY_DATE   TIMESTAMP
+    , DEL_YN        CHAR(1)         DEFAULT 'N' CHECK (DEL_YN IN ('Y', 'N'))
+);
+
+ALTER TABLE BOARD ADD CONSTRAINT FK_BOARD_MEMBER FOREIGN KEY(WRITER_NO) REFERENCES MEMBER; 
+
+
+
+
+-- <MEMBER>
+
+-- 회원가입
+INSERT INTO MEMBER
+(
+    NO
+    , ID
+    , PWD
+    , NICK
+) 
+VALUES
+(
+    SEQ_MEMBER.NEXTVAL
+    , ?
+    , ?
+    , ?
+);
+-- 로그인
+SELECT *
+FROM MEMBER
+WHERE ID = ?
+AND PWD = ?
+AND DEL_YN = 'N'
+;
+-- 비밀번호 수정
+UPDATE MEMBER
+SET
+    PWD = ?
+    , MODIFY_DATE = SYSDATE
+WHERE NO = ?
+AND PWD = ?
+;     
+-- 닉네임 수정
+UPDATE MEMBER
+SET
+    NICK = ?
+    , MODIFY_DATE = SYSDATE
+WHERE NO = ?
+; 
+-- 회원탈퇴
+UPDATE MEMBER
+SET
+    DEL_YN = 'Y'
+    , MODIFY_DATE = SYSDATE
+WHERE NO = ?
+AND PWD = ?
+; 
+-- 회원 목록 조회 (관리자)
+SELECT *
+FROM MEMBER
+ORDER BY NO DESC
+;
+-- 회원 상세 조회 (관리자)
+SELECT *
+FROM MEMBER
+WHERE ID = ?
+;
+
+-- <BOARD>
+commit;
+-- 게시글 작성
+INSERT INTO BOARD
+(
+    NO
+    , TITLE
+    , CONTENT
+    , WRITER_NO
+) 
+VALUES
+(
+    SEQ_BOARD.NEXTVAL
+    , ?
+    , ?
+    , ?
+);
+-- 게시글 제목 수정
+UPDATE BOARD
+    SET
+        TITLE = ?
+        , MODIFY_DATE = SYSDATE
+WHERE NO = ?
+AND WRITER_NO = ?
+;
+-- 게시글 내용 수정
+UPDATE BOARD
+    SET
+        CONTENT = ?
+        , MODIFY_DATE = SYSDATE
+WHERE NO = ?
+AND WRITER_NO = ?
+;
+-- 게시글 삭제
+UPDATE BOARD
+    SET
+        DEL_YN = 'Y'
+        , MODIFY_DATE = SYSDATE
+WHERE NO = ?
+AND WRITER_NO = ?
+;
+-- 게시글 조회수 증가
+UPDATE BOARD
+    SET
+        HIT = HIT + 1
+WHERE NO = ?
+;
+-- 게시글 목록 조회
+SELECT
+    B.NO
+    , B.TITLE
+    , B.CONTENT
+    , B.WRITER_NO
+    , B.HIT
+    , B.ENROLL_DATE
+    , B.MODIFY_DATE
+    , B.DEL_YN
+    , M.NICK
+FROM BOARD B
+JOIN MEMBER M ON ( B.WRITER_NO = M.NO )
+WHERE B.DEL_YN = 'N'
+ORDER BY B.NO DESC
+;
+-- 게시글 상세 조회
+SELECT *
+FROM BOARD
+WHERE NO = ?
+AND DEL_YN = 'N'
+;
+-- 게시글 검색(제목)
+SELECT *
+FROM BOARD
+WHERE TITLE LIKE '%' || ? || '%'
+AND DEL_YN = 'N'
+;
+-- 게시글 검색(내용)
+SELECT *
+FROM BOARD
+WHERE CONTENT LIKE '%' || ? || '%'
+AND DEL_YN = 'N'
+;
+-- 게시글 검색(작성자)
+SELECT *
+FROM BOARD
+WHERE WRITER_NO LIKE '%' || ? || '%'
+AND DEL_YN = 'N'
+;
+
+-- 닉네임으로 번호 얻기
+SELECT 
+    NO
+FROM MEMBER
+WHERE NICK = ?
+;

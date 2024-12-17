@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERY READY PLAN</title>
+    <link rel="stylesheet" href="hello2.css">
+    <script defer src="hello2.js"></script>
+</head>
+
+<body>
+    <div class="test-area">
+        <div class="test1">TEST1</div>
+    </div>
+    <div class="test-area">
+        <div class="test2">TEST2</div>
+    </div>
+    <div class="test-area">
+        <div class="test3">TEST3</div>
+    </div>
+    <div>
+        <div class="test4">TEST</div>
+    </div>
+
+    <!-- 모달 구조  test1-->
+    <div>
+        <form action="" method="post" id="overmodal1" class="overmodal1">
+            <div class="overmodal1-content">
+                <span class="overmodal1-close">&times;</span>
+                <div class="overmodal1-title">초과근무 등록 </div>
+                <div><span class="title-span" id="overtimespan">*는 필수입력 사항입니다</span></div>
+                <div class="overmodal1-cont">
+                    <label for="employeeId"><span class="title-span">*</span>사번</label>
+                    <div><input type="text" id="employeeId" class="employeeId"> <input type="button" value="사번선택" class="employee-select-btn"></div>
+                </div>
+                <div class="overmodal1-cont">
+                    <label for="name"><span class="title-span">*</span>사원명</label>
+                    <input type="text" id="name" />
+                </div>
+                <div class="overmodal1-cont" id="department">
+                    <label for="position"><span class="title-span">*</span>소속부서</label>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="overmodal1-cont">
+                    <label for="phone"><span class="title-span">*</span>직급</label>
+                    <input type="text" id="phone" />
+                </div>
+                <div class="overmodal1-cont">
+                    <label for="region"><span class="title-span">*</span>초과근무일자</label>
+                    <input type="text" id="region" />
+                </div>
+                <div class="overmodal1-cont">
+                    <label for="region"><span class="title-span">*</span>초과근무구분&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="region" name="choice" value="1" />주말근무
+                        <input type="radio" id="region" name="choice" value="2" />야간근무</label>
+                </div>
+                <div class="overmodal1-cont">
+                    <label for="position"><span class="title-span">*</span>초과근무시간
+                        <select name="hour" id="overtime-hour">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>시
+                        <select name="minute" id="overtime-minute">
+                            <option value="0">0</option>
+                            <option value="30">30</option>
+                        </select>분
+                    </label>
+
+                </div>
+                <div class="overmodal-cont"></div>
+                <div></div>
+                <div class="btn-area">
+                    <div class="button-container"><button>삭제</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- 모달 구조  test2-->
+    <div>
+        <form action="" method="post" id="overmodal2" class="overmodal2">
+            <div class="overmodal2-content">
+                <span class="overmodal2-close">&times;</span>
+                <div class="overmodal2-title">초과근무 등록</div>
+                <div></div>
+                <div class="overmodal2-cont">
+                    <label for="employeeId">사번</label>
+                    <div><input type="text" id="employeeId" class="employeeId"> <input type="button" value="사번선택" class="employee-select-btn"></div>
+                </div>
+                <div class="overmodal2-cont">
+                    <label for="name">사원명</label>
+                    <input type="text" id="name" />
+                </div>
+                <div class="overmodal2-cont" id="department">
+                    <label for="position">소속부서</label>
+                    <input type="text">
+                </div>
+                <div class="overmodal2-cont">
+                    <label for="phone">직급</label>
+                    <input type="text" id="phone" />
+                </div>
+                <div class="overmodal2-cont">
+                    <label for="region">초과근무일자</label>
+                    <input type="text" id="region" />
+                </div>
+                <div class="overmodal2-cont">
+                    <label for="region">초과근무구분</label>
+                    <input type="text">
+                </div>
+                <div class="overmodal2-cont">
+                    <label for="position">초과근무시간</label>
+                    <input type="text">
+
+                </div>
+                <div class="overmodal-cont"></div>
+                <div></div>
+                <div class="btn-area">
+                    <div class="button-container"><button>수정</button></div>
+                    <div class="button-container"><button>삭제</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <!-- 모달 구조  test-->
+    <div>
+        <form action="" method="post" id="vacationmodal" class="vacationmodal">
+            <div class="vacationmodal-content">
+                <span class="vacationmodal-close">&times;</span>
+                <div class="vacationmodal-title">휴가 등록</div>
+                <div><span class="title-span" id="overtimespan">*는 필수입력 사항입니다</span></div>
+                <div class="vacationmodal-cont">
+                    <label for="employeeId"><span class="title-span">*</span>사번</label>
+                    <div><input type="text" id="employeeId" class="employeeId"> <input type="button" value="사번선택" class="employee-select-btn"></div>
+                </div>
+                <div class="vacationmodal-cont">
+                    <label for="name"><span class="title-span">*</span>사원명</label>
+                    <input type="text" id="name" />
+                </div>
+                <div class="vacationmodal-cont" id="department">
+                    <label for="position"><span class="title-span">*</span>소속부서</label>
+                    <input type="text">
+                </div>
+                <div class="vacationmodal-cont">
+                    <label for="phone"><span class="title-span">*</span>직급</label>
+                    <input type="text" id="phone" />
+                </div>
+                <div class="vacationmodal-cont">
+                    <label for="region"><span class="title-span">*</span>일자</label>
+                    <input type="text" id="region" />
+                </div>
+                <div class="vacationmodal-cont">
+                    <label for="region"><span class="title-span">*</span>휴가유형
+                    <select name="minute" id="overtime-type">
+                        <option value="1">연차</option>
+                        <option value="2">반차</option>
+                        <option value="3">법정휴가</option>
+                        <option value="4">연가</option>
+                        <option value="5">월차</option>
+                    </select></label>
+                </div>
+                <div class="vacationmodal-cont" id="content-area">
+                    <label for="position"><span class="title-span">*</span>휴가사유 </label>
+                    <textarea name="" id=""></textarea>
+
+                </div>
+
+                <div></div>
+                <div class="btn-area">
+                    <div class="button-container"><button>수정</button></div>
+                    <div class="button-container"><button>삭제</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- 모달 구조 -->
+    <div id="salarymodal" class="salarymodal">
+        <form action="">
+        <div class="salarymodal-content">
+            <span class="salarymodal-close">&times;</span>
+            <div class="salarymodal-first">
+                <div class="salarymodal-title">사원 등록</div>
+                <div class="salarymodal-subtitle">기본정보
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="title-span">*는 필수입력 사항입니다</span></div>
+
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>사번</label>
+                    <div><input type="text" id="employeeId" class="employeeId"> <input type="button" value="사번선택" class="employee-select-btn"></div>
+                    </button>
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>사원명</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>소속부서</label>
+                    <select name="" id="" class="select-option">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>직급</label>
+                    <select name="" id="" class="select-option">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel">연봉</label>
+                    <input type="text" id="price" />
+                </div>
+
+
+
+
+            </div>
+            <div class="salarymodal-second">
+                <div class="salarymodal-subtitle">지급정보</div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>지급연월</label>
+                    <input type="date" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel">기본급</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>식대</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>통신비</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>지급총액</label>
+                    <input type="text" id="price" />
+                </div>
+            </div>
+
+            <div class="salarymodal-third">
+                <div class="salarymodal-subtitle">공제정보</div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>국민연금</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>건강보험</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>고용보험</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>장기요양보험료</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>소득세</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel"><span class="title-span">*</span>지방소득세</label>
+                    <input type="text" id="price" />
+                </div>
+                <div class="salarymodal-cont">
+                    <label class="salarylabel">공제총액</label>
+                    <input type="text" id="price" />
+                </div>
+                
+                <div class="salarymodal-cont">
+                    <label class="salarylabel">실지급액</label>
+                    <input type="text" id="price" />
+                </div>
+                <div></div>
+                <div class="salarymodal-cont">
+                    <input type="submit" value="등록" />
+                    
+                </div>
+
+            </div>
+        </div>
+    </form>
+    </div>
+    <div>
+        <form action="" method="post" id="btnmodal" class="btnmodal">
+            <div class="btnmodal-content">
+                <span class="btnmodal-close">&times;</span>
+                <div class="btnmodal-title">초과근무 등록</div>
+                
+                
+                <div class="btnmodal-main">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>사번</th>
+                                <th>사원명</th>
+                                <th>소속</th>
+                                <th>직급</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+              
+               
+                
+                <div class="btnmodal-cont"></div>
+                <div class="btn-area">
+                    <div class="button-container"><button>선택</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
