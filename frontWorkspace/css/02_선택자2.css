@@ -1,0 +1,65 @@
+h1{
+    background-color: red;
+}
+
+div[age=a] {
+    background-color: green;
+}
+
+/* #test02{
+    background-color: gray;
+} */
+
+/* #test02 > ul{
+    background-color: gray;
+} */
+
+#test02 li{
+    background-color: gray;
+}
+
+#test03+div {
+    background-color: aqua;
+}
+
+/* #test03~div {
+    background-color: aqua;
+} */
+
+#test04-1:active {
+    background-color: aqua;
+}
+
+#test04-2:hover {
+    background-color: aqua;
+}
+
+#test05-1:checked{
+    width: 100px;
+    height: 100px;
+}
+
+#test05-2:focus{
+    border: 3px dashed red;
+}
+
+#test05-2~input:enabled{
+    background-color: green;
+}
+
+#test06 > p:nth-child(odd){
+    background-color: violet;
+}
+
+#test07 > p:nth-of-type(3){
+    background-color: aqua;
+}
+
+#test08 > p::before{
+    content: "zzzzzzzz";
+    background-color: orange;
+}
+
+#test09 > p:not(:nth-child(3)){
+    background-color: brown;
+}

@@ -1,0 +1,121 @@
+
+.tb {
+    width: 95%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-collapse: collapse;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #908a8a67;
+}
+
+#home_title th {
+    font-size: 40px;
+    padding: 20px;
+}
+
+#home_menu td {
+    font-size: 25px;
+    padding: 15px;
+    width: 25%;
+}
+
+td, th {
+    border: 1px solid white;
+}
+
+#home_menu a {
+    color: white;
+    text-decoration-line : none; 
+}
+
+#home_menu a:hover {
+    color: lightgray;
+}
+
+#home {
+    background-color: #ffa500;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+div {
+    padding: 30px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+div#contact {
+    padding: 30px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    line-height: 0.6;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px dotted #ccc;
+    padding: 10px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-image {
+    transform: scale(1.5);
+}
+
+.menu-name {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.menu-name h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menu-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+}
+
+.bookpage{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width: 15px;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+#book {
+    text-decoration-line: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    color: black;
+    font-weight: bold;
+}

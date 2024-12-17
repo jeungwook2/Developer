@@ -1,0 +1,552 @@
+-- 초과근무 조회 (인사 > 초과근무관리 > 검색) OVERTIME
+SELECT 
+A.NO  ,
+A.THISDATE  ,
+A.EMP_NO  ,
+B.NAME  NAME,
+B.DEPT_CODE,
+C.NAME  DNAME,
+D.NAME  PNAME,
+A.TYPE,
+TO_CHAR(A.WORK_HOUR, 'HH24:MI') AS WORK_HOUR
+ FROM OVERTIME A
+ JOIN EMPLOYEE B ON(A.EMP_NO = B.NO)
+ JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+ JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+ WHERE A.DEL_YN='N';
+ 
+ 
+ 
+ SELECT * FROM OVERTIME;
+ 
+ 
+-- 초과근무 조회 검색
+SELECT 
+A.NO  ,
+A.THISDATE  ,
+A.EMP_NO  ,
+B.NAME  DNAME,
+C.NAME  DEPARTMENT,
+D.NAME  POSITION,
+A.TYPE,
+A.WORK_HOUR  
+ FROM OVERTIME A
+ JOIN EMPLOYEE B ON(A.EMP_NO = B.NO)
+ JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+ JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+ WHERE ?='?';
+-----일자에서 숫자를 가져와서 월단위 검색
+-- 초과근무 상세조회 (인사 > 초과근무관리 > 상세 화면)
+SELECT 
+A.NO  ,
+A.THISDATE  ,
+A.EMP_NO  ,
+B.NAME  DNAME,
+C.NAME  DEPARTMENT,
+D.NAME  POSITION,
+A.TYPE,
+A.WORK_HOUR  
+ FROM OVERTIME A
+ JOIN EMPLOYEE B ON(A.EMP_NO = B.NO)
+ JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+ JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+ WHERE A.NO = 3
+ AND 
+ A.DEL_YN='N';
+-- 초과근무 등록 (인사 > 초과근무관리 > 등록 화면)
+INSERT INTO OVERTIME 
+(
+NO,
+EMP_NO,
+THISDATE,
+TYPE,
+WORK_HOUR
+)
+VALUES
+(
+SEQ_OVERTIME.NEXTVAL,
+1,
+'2024-11-19',
+'야간근무',
+SYSDATE
+);
+commit;
+-- 초과근무 수정 (인사 > 초과근무관리 > 수정 화면)
+UPDATE OVERTIME SET
+------사번
+EMP_NO = ?,
+THISDATE='20241119'
+,TYPE ='주말근무'
+,WORK_HOUR =SYSDATE
+WHERE NO='1' AND DEL_YN='N';
+
+--------
+
+ROLLBACK
+-- 초과근무 삭제 (인사 > 초과근무관리 > 삭제)
+UPDATE OVERTIME SET
+DEL_YN='Y'
+WHERE NO =1;
+
+-- 휴가 조회 
+ SELECT
+        A.NO ,
+        A.THISDATE,
+        A.EMP_NO,
+        B.NAME AS ENAME,
+        C.NAME  AS DNAME,
+        B.DEPT_CODE,
+        D.NAME AS PNAME,
+        E.NAME AS TYPE,
+        B.TOTAL_VACATION_DAYS AS ALL_VACATION,
+        (SELECT
+        SUM(CASE
+        WHEN CODE = 2 THEN 0.5
+        ELSE 1                
+        END) AS TOTAL_COUNT
+        FROM VACATION_LOG
+        WHERE EMP_NO = A.EMP_NO
+        AND DEL_YN='N'
+        AND CODE NOT IN (3)
+        GROUP BY EMP_NO) AS USE_VACATION,
+        B.TOTAL_VACATION_DAYS - COALESCE(
+            (SELECT
+                SUM(
+                    CASE
+                        WHEN CODE = 2 THEN 0.5
+                        ELSE 1
+                    END
+                ) AS TOTAL_COUNT
+            FROM VACATION_LOG
+            WHERE EMP_NO = A.EMP_NO
+                AND DEL_YN='N'
+              AND CODE NOT IN (3)
+            GROUP BY EMP_NO),
+                0
+            ) AS VACATION,
+        A.REASON ,
+        A.ENROLL_DATE,
+        A.MODIFY_DATE,
+        A.DEL_YN FROM VACATION_LOG A
+        JOIN EMPLOYEE B ON(A.EMP_NO = B.NO)
+        JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+        JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+        JOIN VACATION_TYPE E ON(A.CODE =E.NO)
+        WHERE A.DEL_YN ='N';
+
+
+
+-- 휴가 조회 검색
+SELECT
+            A.NO ,
+            A.THISDATE,
+            A.EMP_NO,
+            B.NAME AS ENAME,
+            C.NAME  AS DNAME,
+            D.NAME AS PNAME,
+            E.NAME AS TYPE,
+            B.TOTAL_VACATION_DAYS AS ALL_VACATION,
+            (SELECT
+            SUM(CASE
+            WHEN CODE = 2 THEN 0.5 
+            ELSE 1                 
+            END) AS TOTAL_COUNT
+            FROM VACATION_LOG
+            WHERE EMP_NO = 1
+            AND CODE NOT IN (3)
+            GROUP BY EMP_NO) AS USE_VACATION,
+            B.TOTAL_VACATION_DAYS-(SELECT
+            SUM(CASE
+            WHEN CODE = 2 THEN 0.5 
+            ELSE 1                 
+            END) AS TOTAL_COUNT
+            FROM VACATION_LOG
+            WHERE EMP_NO = 1
+            AND CODE NOT IN (3)
+            GROUP BY EMP_NO) AS VACATION,
+            A.REASON ,
+            A.ENROLL_DATE,
+            A.MODIFY_DATE,
+            A.DEL_YN FROM VACATION_LOG A
+            JOIN EMPLOYEE B ON(A.EMP_NO = B.NO)
+            JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+            JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+            JOIN VACATION_TYPE E ON(A.CODE =E.NO)
+WHERE A.DEL_YN ='N' AND ? = ?;
+
+
+-- 휴가 상세조회 (인사 > 휴가관리 > 상세 화면)
+SELECT
+            A.NO ,
+            A.THISDATE,
+            A.EMP_NO,
+            B.NAME AS ENAME,
+            C.NAME  AS DNAME,
+            D.NAME AS PNAME,
+            E.NAME AS TYPE,
+            B.TOTAL_VACATION_DAYS AS ALL_VACATION,
+            (SELECT
+            SUM(CASE
+            WHEN CODE = 2 THEN 0.5 
+            ELSE 1                 
+            END) AS TOTAL_COUNT
+            FROM VACATION_LOG
+            WHERE EMP_NO = 1
+            AND CODE NOT IN (3)
+            GROUP BY EMP_NO) AS USE_VACATION,
+            B.TOTAL_VACATION_DAYS-(SELECT
+            SUM(CASE
+            WHEN CODE = 2 THEN 0.5 
+            ELSE 1                 
+            END) AS TOTAL_COUNT
+            FROM VACATION_LOG
+            WHERE EMP_NO = 1
+            AND CODE NOT IN (3)
+            GROUP BY EMP_NO) AS VACATION,
+            A.REASON ,
+            A.ENROLL_DATE,
+            A.MODIFY_DATE,
+            A.DEL_YN FROM VACATION_LOG A
+            JOIN EMPLOYEE B ON(A.EMP_NO = B.NO)
+            JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+            JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+            JOIN VACATION_TYPE E ON(A.CODE =E.NO)
+WHERE A.DEL_YN ='N' AND NO = ?; 
+
+----산출 해서 내리기 
+-- 휴가 등록 (인사 > 휴가관리 > 등록 화면)
+INSERT INTO VACATION_LOG(
+NO,
+EMP_NO,
+CODE,
+THISDATE,
+REASON
+)VALUES(
+SEQ_VACATION_LOG.NEXTVAL,
+1,
+2,
+2024-11-18,
+'머리가 너무아픕니다'
+);
+
+
+SELECT *FROM  SALARY WHERE EMP_NO =1 AND DEL_YN ='N';
+
+--UPDATE EMPLOYEE
+--SET TOTAL_VACATION_DAYS = (TOTAL_VACATION_DAYS-1)
+--WHERE NO = ?(EMP_NO
+--) ;
+-- 휴가 수정 (인사 > 휴가관리 > 수정 화면)
+UPDATE VACATION_LOG SET
+--EMP_NO = 1, 
+CODE = 1,
+THISDATE ='2024-11-19',
+REASON='나는 머리가 너무아파와요',
+MODIFY_DATE= SYSDATE
+WHERE  DEL_YN ='N';
+-- 휴가 삭제 (인사 > 휴가관리 > 삭제)
+UPDATE VACATION_LOG SET
+DEL_YN = 'Y'
+WHERE NO = 1;
+
+-- 급여 조회 (인사 > 급여관리 > 검색)      SALARY
+SELECT 
+    A.NO ,
+    B.SALARY,
+    A.PAY_YEARMONTH ,
+    A.EMP_NO ,
+    B.NAME ENAME,
+    D.NAME DNAME,
+    B.DEPT_CODE,
+    C.NAME PNAME,
+    A.BASIC ,
+    A.MEAL_ALLOWANCE ,
+    A.COMMUNICATION_COST ,
+    (A.BASIC+A.MEAL_ALLOWANCE+A.COMMUNICATION_COST) AS PAYMENT,
+    A.NATIONAL_PENSION ,
+    A.HEALTH_INSURANCE ,
+    A.EMPLOYMENT_INSURANCE ,
+    A.LONGTERM_CARE_INSURANCE ,
+    A.INCOME_TAX ,
+    A.LOCAL_TAXES ,
+    (A.NATIONAL_PENSION+A.HEALTH_INSURANCE+A.EMPLOYMENT_INSURANCE+A.LONGTERM_CARE_INSURANCE+A.INCOME_TAX+A.LOCAL_TAXES)AS DEDUCTIONS,
+    ((A.BASIC+A.MEAL_ALLOWANCE+A.COMMUNICATION_COST) - (A.NATIONAL_PENSION+A.HEALTH_INSURANCE+A.EMPLOYMENT_INSURANCE+A.LONGTERM_CARE_INSURANCE+A.INCOME_TAX+A.LOCAL_TAXES)) AS NETPAYMENT
+    FROM SALARY A
+    JOIN EMPLOYEE B ON (A.EMP_NO = B.NO)
+    JOIN POSITION C ON (B.POSITION_CODE= C.NO)
+    JOIN DEPARTMENT D ON (B.DEPT_CODE = D.NO)
+    WHERE A.DEL_YN = 'N';
+-- 급여 조회 검색
+SELECT 
+   SELECT 
+    A.NO ,
+    A.PAY_YEARMONTH ,
+    A.EMP_NO ,
+    B.NAME ENAME,
+    D.NAME DEPARTMENT,
+    C.NAME POSITION,
+    A.BASIC ,
+    A.MEAL_ALLOWANCE ,
+    A.COMMUNICATION_COST ,
+    (A.BASIC+A.MEAL_ALLOWANCE+A.COMMUNICATION_COST) AS PAYMENT,
+    A.NATIONAL_PENSION ,
+    A.HEALTH_INSURANCE ,
+    A.EMPLOYMENT_INSURANCE ,
+    A.LONGTERM_CARE_INSURANCE ,
+    A.INCOME_TAX ,
+    A.LOCAL_TAXES ,
+    (A.NATIONAL_PENSION+A.HEALTH_INSURANCE+A.EMPLOYMENT_INSURANCE+A.LONGTERM_CARE_INSURANCE+A.INCOME_TAX+A.LOCAL_TAXES)AS DEDUCTIONS,
+    ((A.BASIC+A.MEAL_ALLOWANCE+A.COMMUNICATION_COST) - (A.NATIONAL_PENSION+A.HEALTH_INSURANCE+A.EMPLOYMENT_INSURANCE+A.LONGTERM_CARE_INSURANCE+A.INCOME_TAX+A.LOCAL_TAXES)) AS NETPAYMENT
+    FROM SALARY A
+    JOIN EMPLOYEE B ON (A.EMP_NO = B.NO)
+    JOIN POSITION C ON (B.POSITION_CODE= C.NO)
+    JOIN DEPARTMENT D ON (B.DEPT_CODE = D.NO)
+    WHERE ? = '?';
+-- 급여 상세조회 (인사 > 급여관리 > 상세 화면)
+SELECT 
+    A.NO ,
+    A.PAY_YEARMONTH ,
+    A.EMP_NO ,
+    B.NAME ENAME,
+    D.NAME DEPARTMENT,
+    C.NAME POSITION,
+    A.BASIC ,
+    A.MEAL_ALLOWANCE ,
+    A.COMMUNICATION_COST ,
+    (A.BASIC+A.MEAL_ALLOWANCE+A.COMMUNICATION_COST) AS PAYMENT,
+    A.NATIONAL_PENSION ,
+    A.HEALTH_INSURANCE ,
+    A.EMPLOYMENT_INSURANCE ,
+    A.LONGTERM_CARE_INSURANCE ,
+    A.INCOME_TAX ,
+    A.LOCAL_TAXES ,
+    (A.NATIONAL_PENSION+A.HEALTH_INSURANCE+A.EMPLOYMENT_INSURANCE+A.LONGTERM_CARE_INSURANCE+A.INCOME_TAX+A.LOCAL_TAXES)AS DEDUCTIONS,
+    ((A.BASIC+A.MEAL_ALLOWANCE+A.COMMUNICATION_COST) - (A.NATIONAL_PENSION+A.HEALTH_INSURANCE+A.EMPLOYMENT_INSURANCE+A.LONGTERM_CARE_INSURANCE+A.INCOME_TAX+A.LOCAL_TAXES)) AS NETPAYMENT
+    FROM SALARY A
+    JOIN EMPLOYEE B ON (A.EMP_NO = B.NO)
+    JOIN POSITION C ON (B.POSITION_CODE= C.NO)
+    JOIN DEPARTMENT D ON (B.DEPT_CODE = D.NO)
+    WHERE A.EMP_NO = 1 AND DEL_YN = 'N';
+-- 급여 등록 (인사 > 급여관리 > 등록 화면)
+INSERT INTO SALARY(
+    NO,
+    EMP_NO,
+    PAY_YEARMONTH,
+    BASIC,
+    MEAL_ALLOWANCE,
+    COMMUNICATION_COST,
+    NATIONAL_PENSION,
+    HEALTH_INSURANCE,
+    EMPLOYMENT_INSURANCE,
+    LONGTERM_CARE_INSURANCE,
+    INCOME_TAX,
+    LOCAL_TAXES
+)VALUES(
+    SEQ_SALARY.NEXTVAL,
+    1,
+    '201906',
+    2500000 ,
+    150000 ,
+    50000 ,
+    50000 ,
+    50000 ,
+    50000 ,
+    50000 ,
+    5000 ,
+    3000 
+);
+
+
+commit;
+SELECT * FROM SALARY;
+-- 급여 수정 (인사 > 급여관리 > 수정 화면)
+
+UPDATE SALARY
+SET 
+PAY_YEARMONTH = ?,
+NATIONAL_PENSION=?,
+MEAL_ALLOWANCE=?,
+COMMUNICATION_COST=?,
+HEALTH_INSURANCE = ?,
+EMPLOYMENT_INSURANCE = ?,
+LONGTERM_CARE_INSURANCE=?,
+INCOME_TAX=?,
+LOCAL_TAXES = ?
+WHERE NO = ? ;
+--{netPayment=2473350, incomeTax=5, payment=4, payYearmonth=2024-09, basic=1, longtermCareInsurance=4, deductions=1, nationalPension=1, employmentInsurance=3, localTaxes=6}
+    
+-- 급여 삭제 (인사 > 급여관리 > 삭제)
+DELETE SALARY 
+WHERE NO = ? AND DEL_YN='N';
+
+
+
+
+-------------------------
+
+SELECT ITEM_CODE,NAME,PRICE,COUNT(ITEM_CODE)AS 수량,((SELECT COUNT(B.P_NO)
+FROM PRODUCT_REGISTRATION A JOIN DEFECTIVE_PRODUCT B ON (A.NO = B.P_NO)
+WHERE A.NO = P_NO
+GROUP BY ITEM_CODE,NAME,PRICE)-(COUNT(ITEM_CODE))) AS 불량상품뺀수
+FROM PRODUCT_REGISTRATION
+WHERE DEL_YN='N'
+GROUP BY ITEM_CODE,NAME,PRICE
+ORDER BY ITEM_CODE;
+
+
+SELECT * FROM EMPLOYEE WHERE DEL_YN ='N';
+-----------------------------------------------------------------------------------------------
+SELECT COUNT(B.P_NO)
+FROM PRODUCT_REGISTRATION A JOIN DEFECTIVE_PRODUCT B ON (A.NO = B.P_NO)
+WHERE A.NO =1
+GROUP BY ITEM_CODE,NAME,PRICE;
+
+
+
+
+SELECT * 
+FROM DEFECTIVE_PRODUCT A
+JOIN PRODUCT_REGISTRATION B ON (A.P_NO = B.NO)
+WHERE A.P_NO = B.NO AND A.DEL_YN='N';
+--GROUP BY P_NO;
+
+
+
+SELECT * FROM PRODUCT_REGISTRATION;
+-------------상품 등록---------------
+INSERT INTO PRODUCT_REGISTRATION 
+    (   
+     NO
+    ,ITEM_CODE
+    ,NAME
+    ,SERIAL_NUMBER
+    ,PRICE
+    ,WARRANTY_PERIOD
+    ,RECEIVED_DATE
+    ,FACTORY_NAME
+    ,FACTORY_LOCATION
+
+    )
+    VALUES
+    (
+    SEQ_PRODUCT_REGISTRATION.NEXTVAL,
+    1,
+    'LG트윈냉장고',
+    20241120002,
+    1500000,
+    3,
+    SYSDATE,
+    '청주공장',
+    '청주시 청주로'
+    );
+    
+    
+    INSERT INTO VACATION_TYPE(NO,NAME)VALUES(SEQ_VACATION_TYPE.NEXTVAL,'연가');
+    COMMIT;
+    ROLLBACK;
+    SELECT* FROM VACATION_TYPE;
+    
+   ------------------------------
+   ----------사원조회
+   -----------------
+   
+SELECT 
+    E.NO,
+PROFILE_IMAGE,
+PWD,
+E.NAME,
+BIRTH,
+GENDER,
+EMAIL,
+PHONE,
+EMERGENCY_PHONE,
+ADDRESS,
+DEPT_CODE,
+D.NAME AS DNAME,
+POSITION_CODE,
+P.NAME AS PNAME,
+SALARY,
+BANK_CODE,
+ACCOUNT_NO,
+TOTAL_VACATION_DAYS,
+STATUS_CODE,
+ES.NAME AS ESNAME,
+ENTER_DATE,
+OUT_DATE,
+ENROLL_DATE,
+MODIFY_DATE,
+DEL_YN
+FROM EMPLOYEE  E 
+JOIN DEPARTMENT D ON(E.DEPT_CODE = D.NO)
+JOIN POSITION P ON(E.POSITION_CODE = P.NO)
+JOIN EMP_STATUS ES ON(E.STATUS_CODE =ES.NO);
+
+commit;
+----휴가 단일 조회
+UPDATE VACATION_LOG
+SET DEL_YN='N';
+COMMIT;
+ 
+       SELECT *
+FROM (
+    SELECT
+        A.NO,
+        A.THISDATE,
+        A.EMP_NO,
+        B.NAME AS ENAME,
+        C.NAME AS DNAME,
+        B.DEPT_CODE,
+        D.NAME AS PNAME,
+        E.NAME AS TYPE,
+        B.TOTAL_VACATION_DAYS AS ALL_VACATION,
+        (SELECT
+            SUM(CASE
+                WHEN CODE = 2 THEN 0.5
+                ELSE 1                
+            END) AS TOTAL_COUNT
+         FROM VACATION_LOG
+         WHERE EMP_NO = A.EMP_NO
+         AND DEL_YN='N'
+           AND CODE NOT IN (3)
+         GROUP BY EMP_NO) AS USE_VACATION,
+        B.TOTAL_VACATION_DAYS - COALESCE(
+            (SELECT
+                SUM(
+                    CASE
+                        WHEN CODE = 2 THEN 0.5
+                        ELSE 1
+                    END
+                ) AS TOTAL_COUNT
+             FROM VACATION_LOG
+             WHERE EMP_NO = A.EMP_NO
+             AND DEL_YN='N'
+               AND CODE NOT IN (3)
+             GROUP BY EMP_NO),
+            0
+        ) AS VACATION,
+        A.REASON,
+        A.ENROLL_DATE,
+        A.MODIFY_DATE,
+        A.DEL_YN
+    FROM VACATION_LOG A
+    JOIN EMPLOYEE B ON (A.EMP_NO = B.NO)
+    JOIN DEPARTMENT C ON (B.DEPT_CODE = C.NO)
+    JOIN POSITION D ON (B.POSITION_CODE = D.NO)
+    JOIN VACATION_TYPE E ON (A.CODE = E.NO)
+    WHERE B.NO = 3
+      AND A.DEL_YN = 'N'
+    ORDER BY A.ENROLL_DATE DESC
+)
+WHERE ROWNUM = 1;
+
+-----휴가 개수 가져오기 로그인정보의
+                        
+SELECT COUNT(NO) FROM VACATION_LOG
+            WHERE EMP_NO=5 AND DEL_YN='N'
+            ;
+
+SELECT * FROM EMPLOYEE;
+
+
+            
+            

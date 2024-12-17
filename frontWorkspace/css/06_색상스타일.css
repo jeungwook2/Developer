@@ -1,0 +1,17 @@
+#target{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 43, 122, 0.498);
+    background-image: url(/resources/img/long.png);
+
+    background-repeat: no-repeat;
+
+    background-size: auto;
+    background-size: contain;
+    background-size: cover;
+    background-size: 100px 100px;
+    background-size: 50% 50%;
+
+    background-position: center center;
+    background-position: 30% 200px;
+}

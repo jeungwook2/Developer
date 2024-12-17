@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요 실습 문제</title>
+    <style>
+        .div-test {
+            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        #area {
+            border: 1px solid;
+            width: 300px;
+            height: 200px;
+            margin-top: 5px;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>개요 실습 문제</h1>
+
+    <hr>
+
+    <h2>문제 1. 색상 조절하기</h2>
+
+    <p>
+        색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들기
+    </p>
+    <div id="div1" class="div-test"></div>
+    <input id="selectColor" type="color">
+    <button onclick="changeColor();">변경</button>
+
+    <script>
+        function changeColor() {
+            let x1 = document.querySelector("#selectColor").value;
+            console.log(x1);
+
+            document.querySelector("#div1").style.backgroundColor = x1;
+        }
+    </script>
+    
+    <hr>
+    
+    <h2>문제 2. 크기 변경하기</h2>
+    <p>
+        버튼에 따라 크기 조절이 가능하도록 만들기
+    </p>
+    <div id="div2" class="div-test"></div>
+    <button onclick="setSize('1');">50X50</button>
+    <button onclick="setSize('2');">원본(100X100)</button>
+    <button onclick="setSize('3');">200X200</button>
+
+    <script>
+        var div2 = document.getElementById('div2');
+        
+        function setSize(id) {
+            if(id === '1'){
+                document.querySelector("#div2").style.width = "50px";
+                document.querySelector("#div2").style.height = "50px";
+            }else if(id === '2'){
+                document.querySelector("#div2").style.width = "100px";
+                document.querySelector("#div2").style.height = "100px";
+            }else{
+                document.querySelector("#div2").style.width = "200px";
+                document.querySelector("#div2").style.height = "200px";
+            }
+        }
+    </script>
+
+    <hr>
+
+    <h2>문제 3. HTML 태그에 접근</h2>
+    <p>
+        텍스트 박스로 입력받은 데이터를 가져와서 출력하기 <br>
+        (단, 구매자는 태그이름, 상품명은 아이디, 구매 가격은 name값으로 접근)
+    </p>
+
+    <label>구매자 : <input type="text" placeholder="구매자의 이름을 입력하세요."></label> 
+
+    <br><br>
+
+    <label>상품명 : <input type="text" id="pName" placeholder="구매 상품명을 입력하세요."></label>
+
+    <br><br>
+
+    <label>가격 : <input type="text" name="price" placeholder="구매 가격을 입력하세요."></label>
+
+    <br><br>
+
+    <button onclick="printValue();">입력값 출력하기</button>
+
+    <div id="area"></div>
+
+    <script>
+        function printValue() {
+
+            let buyer = document.querySelector('label:nth-of-type(1) input').value;
+
+            let productName = document.querySelector("#pName").value;
+
+            let price = document.querySelector('input[name="price"]').value;
+
+            document.querySelector("#area").innerHTML = ` 구매자 : ${buyer}, 상품명 : ${productName}
+            , 가격은 ${price}`;
+        }
+    </script>
+
+    <hr>
+
+    <h2>문제 4. 테이블 만들기</h2>
+    <p>
+        prompt()로 사용자로부터 행과 열의 개수를 입력받아 테이블 만들기 <br>
+        아래의 div 태그에 innerHTML 속성을 사용해서 만들어진 테이블 포함한다.
+    </p>
+
+    <button onclick="makeTable();">테이블 생성</button>
+
+    <div id="div3" style="margin-top: 10px;"></div>
+
+    <script>
+        function makeTable() {
+
+        let rows = parseInt(prompt("행의 개수를 입력하세요:"));
+        let cols = parseInt(prompt("열의 개수를 입력하세요:"));
+        let div3 = document.querySelector("#div3");
+
+        let str = "<table border='1'>";
+        let cnt = 1;
+
+        for (let i = 0; i < rows; i++) {
+            str += "<tr>"; // 행 시작
+            for (let j = 0; j < cols; j++) {
+                str += "<td>(" + cnt + ")</td>"; // 셀 추가
+                cnt++;
+            }
+            str += "</tr>"; // 행 끝
+        }
+
+        str += "</table>"; // 테이블 끝
+
+        div3.innerHTML = str;
+        }
+    </script>
+
+</body>
+</html>

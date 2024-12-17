@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1142074-36CA-61F0-58D4-61B85F23CB7C" containerWithKeyObject="C23D51DD-F2EC-C2B8-CA79-47788FB7230E" localFKIndex="E15ADC59-3186-DB69-5A70-2359E713F6D9" name="FK_TRANS_ITEM_TO_SALARY_PAYMENT_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>4C3A762E-C1DB-094A-DAB4-A53619B8BB2F</importedID>
+<referredTableLongName>C##SEMI2.TRANS_ITEM</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<mandatory>true</mandatory>
+<refColNames>NO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

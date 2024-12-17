@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="세미2" id="3C47C857-11F2-C3CA-9533-31914DFF9E2E" mainViewID="5803D76F-98BC-CA1D-C744-D8819290FBC0">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

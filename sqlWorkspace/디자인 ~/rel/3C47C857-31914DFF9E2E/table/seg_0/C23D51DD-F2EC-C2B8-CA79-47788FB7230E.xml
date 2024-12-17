@@ -1,0 +1,412 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C23D51DD-F2EC-C2B8-CA79-47788FB7230E" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="SALARY_PAYMENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>BDE61300-3CD7-9000-9558-F22CE30EF3BA</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="DF8E70A3-5931-E046-8A9B-46B15A1A258D">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[급여지급등록순번]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>E3861324-840C-292C-0B0C-68841A37D367</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRANS_CODE" id="0BD039D4-CDC0-3E86-C31C-8B71D379F57E">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[거래항목코드]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>82D3509A-5885-F3A7-46C1-97505D19FFB6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCOUNT_CODE" id="2B7B9973-2E7E-CF79-5274-3C3EB71A6166">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[계좌코드]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>3F1617B8-B814-534D-69D4-31EAF2318EDF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMP_NO" id="8E80A555-5A9C-312B-6634-2CB351DA560F">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[사번]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>DDDBC679-D3FE-867B-33B9-0D9D59FC7CF2</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9A2555A9-C7A7-9D02-3D63-E875321BD047" referredColumn="B643C12D-C544-DE69-4F02-D9AC5F84E380"/>
+</associations>
+</Column>
+<Column name="PAYMENT_DATE" id="C2E0D6AF-5263-FD6A-2D45-F315EBEB34EE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[지급일자]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>459895B7-76F2-FEED-5B04-4A9FCBCDE318</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_YEAR_MONTH" id="179973B7-4EE6-58ED-A286-D789F940D329">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[지급대상근무연월]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>CAAE2827-BA57-3CAB-9130-5E14A82C37C9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BASIC" id="61162C15-0E4F-3794-956B-1A59F39196D6">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[기본급]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>8A687CE1-C4B8-7AFE-0F07-052E693A263F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEAL_ALLOWANCE" id="33836341-D093-7E7D-1E8E-B9B8763AF457">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[식대]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>D27C9EE8-5284-6E71-8F9D-A5856B18CC6C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMUNICATION_COST" id="D8C0C48C-AF50-3CB5-A164-CC8B1397E1F3">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[통신비]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>C3EF2EC2-6A0A-838F-2A05-2D293CE5FF9E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NIGHT_PAY" id="8C9A8CB7-0FC8-1E40-68FB-5149309E9A86">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[야간수당]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>94F79E20-B370-48DD-E8D6-9ECD3738C196</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WEEKEND_PAY" id="E72F9BBB-8C86-328D-88DD-3BC82B02A5ED">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[주말근무수당]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>930EEDF9-D4EE-A684-6F49-10C879DD3868</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXTRA_PAY" id="0E5F554B-B277-22F2-9296-6C8E660A5071">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[추가수당]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>E7664257-0D30-7E1F-BC2E-11C8C853F3D4</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL_PAY" id="5A9749B1-AD7B-45EE-7653-952EB4780F98">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[지급총액]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>AD1BCF6E-550E-A889-6C87-B86F97609647</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NATIONAL_PENSION" id="92D82E74-A850-6682-93BA-1E0A7819EABE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[국민연금]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>5DCE58E2-4742-3B57-EBC5-1481255F1F49</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HEALTH_INSURANCE" id="9C025ECD-E776-B0B3-E387-DF3F0E8AAF0E">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[건강보험]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>A1EB30D4-7F93-EC41-E881-C95E691585CF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLOYMENT_INSURANCE" id="0DE80DCD-9C2F-2B63-45CE-BB11332BFA25">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[고용보험]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>8F548C0A-81D1-D7D4-1DE5-ABE68402BF4A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LONGTERM_CARE_INSURANCE" id="57CFB9A8-9290-7CE0-C0E5-C67C542E7643">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[장기요양보험료]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>6B6722C5-92F1-F5F9-D1F1-63A6D7273045</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INCOME_TAX" id="10223515-0E9B-911A-ADDB-3EF5DFA618D2">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[소득세]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>E6D5A3E2-92F1-0D41-47D0-DA56EB7F6336</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCAL_TAXES" id="DA145899-7F34-E081-30F9-6B4FE7DFC444">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[지방소득세]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>76AC59B9-65E8-5961-DE9D-F4EB444CCB39</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXTRA_DEDUCTION" id="8F853311-0DE5-28AE-5A7F-E859244E0344">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[추가공제]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>B3D52A53-8A7C-87D5-671F-A3DEBCD20966</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL_DEDUCTION" id="8AD63DA1-420C-2665-AA5D-0C85D9C419F6">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[공제총액]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>5D023CCD-58BD-984E-8B6E-5F842BEC2E50</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NET_PAY" id="B236E272-5995-D147-6345-3C073C8DCAD1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[실지급액]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>5EE74E21-AC87-3AF1-9FB4-8F6994B4570E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATTACHMENT" id="597A8F1E-EFDB-9366-714C-F43FD71D4562">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[증빙사진]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>2F8DFF48-E460-B4A4-3A03-84E9171E0EBA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 BYTE</dataTypeSize>
+<ownDataTypeParameters>300 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMENTS" id="E2367948-6BF0-93BE-AE43-FE78D56BFFE9">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[비고]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>52751F18-F3F5-17BA-C1E9-640F8ABB3ED2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENROLL_DATE" id="0CA84184-8981-49C4-C2FB-F5B339EC5208">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[등록일자]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>9FF831CB-0254-D1D3-0565-E342400C0804</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODIFY_DATE" id="2AE27114-287D-2597-7493-40E2108127F1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[수정일자]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>BD670414-2872-AB17-D882-C8C33D4E2FEA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEL_YN" id="4C2DFE2D-D83F-FE25-D65A-17634F5864C7">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[삭제여부]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>9D755FC3-4CE8-2143-747A-A2785B38471B</importedID>
+<constraintName>SYS_C0014338</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D39F4444-E405-C157-BECB-DCAFC1022B6B" name="PK_SALARY_PAYMENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>CE661986-030E-EF34-A4E0-308B6E4AD09C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF8E70A3-5931-E046-8A9B-46B15A1A258D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD9C7D65-2717-B40B-E940-BEEDABE59185" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="PK_SALARY_PAYMENT">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>6CD4D3B3-EF4B-529C-7BD7-D01D8D55928C</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF8E70A3-5931-E046-8A9B-46B15A1A258D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C2AC52F-C5B2-FA8E-7BF0-44F453ABA611" name="FK_ACCOUNT_TO_SALARY_PAYMENT_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B7B9973-2E7E-CF79-5274-3C3EB71A6166"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15B2AB03-A27D-EEA7-E35C-A8168A36A546" name="FK_EMPLOYEE_TO_SALARY_PAYMENT_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E80A555-5A9C-312B-6634-2CB351DA560F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E15ADC59-3186-DB69-5A70-2359E713F6D9" name="FK_TRANS_ITEM_TO_SALARY_PAYMENT_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BD039D4-CDC0-3E86-C31C-8B71D379F57E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

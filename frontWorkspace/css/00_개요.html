@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+            background-color: green;
+        }
+
+        h2{
+            color:blue;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕</h1>
+    <h2>하세요</h2>
+    
+    <script>
+        const x = document.querySelector("h1");
+        x.addEventListener("click" , function(){
+            window.alert("안녕~~~");
+            const bodyTag = document.querySelector("body");
+            bodyTag.innerHTML += "<h1>ㅎㅇㅎㅇ</h1>";
+        })
+    </script>
+
+</body>
+</html>

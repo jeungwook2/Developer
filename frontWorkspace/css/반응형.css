@@ -1,0 +1,23 @@
+#target{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
+
+@media (min-width:1920px){
+    #target{
+        background-color: red;
+    }
+}
+
+@media (min-width:1023px){
+    #target{
+        background-color: blue;
+    }
+}
+
+@media (min-width:767px){
+    #target{
+        background-color: green;
+    }
+}

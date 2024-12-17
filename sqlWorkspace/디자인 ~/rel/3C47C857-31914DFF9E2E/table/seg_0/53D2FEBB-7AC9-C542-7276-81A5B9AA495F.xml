@@ -1,0 +1,171 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53D2FEBB-7AC9-C542-7276-81A5B9AA495F" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="VACATION_LOG">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>960920BB-2784-FFD6-A8F9-EABA74000EB9</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="C8E6BBFC-C6B7-BA71-AB77-5600FAD92A32">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴가신청등록순번]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>E79CE50B-4B58-65AD-1C91-F1893E4C5A87</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMP_NO" id="5394D112-E6C0-4439-A3FE-7F5703470E97">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[사번]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>F618621E-04C3-E4E7-4142-9633443D1CBF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F41B2E8-BA08-9AD4-588B-D7E22F830005" referredColumn="B643C12D-C544-DE69-4F02-D9AC5F84E380"/>
+</associations>
+</Column>
+<Column name="CODE" id="49F595F9-F2CE-E1C4-DBD5-AF395006FDB3">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴가유형코드]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>C80A629C-A48D-65FA-4F59-3D6403F5B826</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="THISDATE" id="4BAF3F75-CB9A-ABA8-DF16-3FFB2962B8EC">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴가를사용한날짜]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>14DC7137-D517-1882-4F00-9B6F96DFCF32</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REASON" id="2617F61C-C7B6-B16C-8E13-4E99A89B1E88">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴가사유]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>9F1C6E1F-CFC3-17DC-FA34-768B3B3E67CA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENROLL_DATE" id="5E237703-3332-7361-913C-C9D7E24EB4E2">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[등록일자]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>B029D326-ABDF-E337-9C40-2C2961637228</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODIFY_DATE" id="262D48F2-B362-680B-F98C-8DAC21786F48">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[수정일자]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>7D4D19EE-707D-A3AE-6778-FCC25D2AC42B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEL_YN" id="87A7417A-24CC-E331-D91F-8867D0E9FAFB">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[삭제여부]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>E236A724-6F73-D4B8-C98E-C78418FA1203</importedID>
+<constraintName>SYS_C0014408</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1A8DC01D-D9CC-6E5D-415A-3BF24507C2C0" name="PK_VACATION_LOG">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>0D066F8E-84FD-E65E-2F21-9D8C2AB41ADA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8E6BBFC-C6B7-BA71-AB77-5600FAD92A32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA076CCC-208C-198A-2A68-3CC11BE7C3ED" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="PK_VACATION_LOG">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>CC8C917D-CE4E-020E-9C07-738037038ECC</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8E6BBFC-C6B7-BA71-AB77-5600FAD92A32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46B6FC9D-69C2-3F58-090E-7BD6DE121819" name="FK_EMPLOYEE_TO_VACATION_LOG_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5394D112-E6C0-4439-A3FE-7F5703470E97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5FE2D75-A7EA-2D15-46B8-D23DC34F17E1" name="FK_VACATION_TYPE_TO_VACATION_LOG_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49F595F9-F2CE-E1C4-DBD5-AF395006FDB3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

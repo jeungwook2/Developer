@@ -1,0 +1,193 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="SALARY_PAYMENT" directorySegmentName="seg_0" id="C23D51DD-F2EC-C2B8-CA79-47788FB7230E">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<schemaObject>C21B8C3C-7C43-F5C3-9493-213EEEE9B94D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8ADE76F5-725E-F727-E9BA-B440148CD376</segment>
+<tableSpace>4C34B22C-4EDD-E88A-48A8-20267F0A5101</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TRANS_CODE" id="0BD039D4-CDC0-3E86-C31C-8B71D379F57E">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENROLL_DATE" id="0CA84184-8981-49C4-C2FB-F5B339EC5208">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYMENT_INSURANCE" id="0DE80DCD-9C2F-2B63-45CE-BB11332BFA25">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EXTRA_PAY" id="0E5F554B-B277-22F2-9296-6C8E660A5071">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INCOME_TAX" id="10223515-0E9B-911A-ADDB-3EF5DFA618D2">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_YEAR_MONTH" id="179973B7-4EE6-58ED-A286-D789F940D329">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MODIFY_DATE" id="2AE27114-287D-2597-7493-40E2108127F1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCOUNT_CODE" id="2B7B9973-2E7E-CF79-5274-3C3EB71A6166">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEAL_ALLOWANCE" id="33836341-D093-7E7D-1E8E-B9B8763AF457">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEL_YN" id="4C2DFE2D-D83F-FE25-D65A-17634F5864C7">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<defaultValue>&apos;N&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="LONGTERM_CARE_INSURANCE" id="57CFB9A8-9290-7CE0-C0E5-C67C542E7643">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ATTACHMENT" id="597A8F1E-EFDB-9366-714C-F43FD71D4562">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTAL_PAY" id="5A9749B1-AD7B-45EE-7653-952EB4780F98">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BASIC" id="61162C15-0E4F-3794-956B-1A59F39196D6">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTAL_DEDUCTION" id="8AD63DA1-420C-2665-AA5D-0C85D9C419F6">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NIGHT_PAY" id="8C9A8CB7-0FC8-1E40-68FB-5149309E9A86">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMP_NO" id="8E80A555-5A9C-312B-6634-2CB351DA560F">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EXTRA_DEDUCTION" id="8F853311-0DE5-28AE-5A7F-E859244E0344">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NATIONAL_PENSION" id="92D82E74-A850-6682-93BA-1E0A7819EABE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HEALTH_INSURANCE" id="9C025ECD-E776-B0B3-E387-DF3F0E8AAF0E">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NET_PAY" id="B236E272-5995-D147-6345-3C073C8DCAD1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_DATE" id="C2E0D6AF-5263-FD6A-2D45-F315EBEB34EE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMUNICATION_COST" id="D8C0C48C-AF50-3CB5-A164-CC8B1397E1F3">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOCAL_TAXES" id="DA145899-7F34-E081-30F9-6B4FE7DFC444">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NO" id="DF8E70A3-5931-E046-8A9B-46B15A1A258D">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMENTS" id="E2367948-6BF0-93BE-AE43-FE78D56BFFE9">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WEEKEND_PAY" id="E72F9BBB-8C86-328D-88DD-3BC82B02A5ED">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_SALARY_PAYMENT" id="AD9C7D65-2717-B40B-E940-BEEDABE59185">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<schemaObject>C21B8C3C-7C43-F5C3-9493-213EEEE9B94D</schemaObject>
+<segment>2E2D273C-ECA3-C39E-905D-39409671D3E0</segment>
+<tableSpace>4C34B22C-4EDD-E88A-48A8-20267F0A5101</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_EMPLOYEE_TO_SALARY_PAYMENT_1" id="15B2AB03-A27D-EEA7-E35C-A8168A36A546">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ACCOUNT_TO_SALARY_PAYMENT_1" id="8C2AC52F-C5B2-FA8E-7BF0-44F453ABA611">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_TRANS_ITEM_TO_SALARY_PAYMENT_1" id="E15ADC59-3186-DB69-5A70-2359E713F6D9">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_SALARY_PAYMENT" id="D39F4444-E405-C157-BECB-DCAFC1022B6B">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<segment>2E2D273C-ECA3-C39E-905D-39409671D3E0</segment>
+<tableSpace>4C34B22C-4EDD-E88A-48A8-20267F0A5101</tableSpace>
+<existingIndex>AD9C7D65-2717-B40B-E940-BEEDABE59185</existingIndex>
+<indexSegment>2E2D273C-ECA3-C39E-905D-39409671D3E0</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0599066C-367F-F302-8F2E-00C3BA67ECF7" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="AS_ENGINEERS">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>AE426FFD-2FDF-CCDC-A0F0-4B9FC0706501</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="468D7147-22B2-EA46-ED2C-8AFD59A2EA00">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[사번]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>A98F9AC8-764D-DB2E-9E88-01CB99618C1A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F6BC04C-E9E6-DE3B-15E1-4ECF3277280B" referredColumn="B643C12D-C544-DE69-4F02-D9AC5F84E380"/>
+</associations>
+</Column>
+<Column name="AREA" id="A64C006C-084E-2DE3-142B-54B3C326DFFD">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[담당지역]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>A456DD66-8CBF-5F15-5280-DD0C1C4AA1E6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEL_YN" id="207DAADE-BCEC-C90A-2339-DA38045D6E36">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>C45E57C7-0214-E367-8DE4-89708F919DC6</importedID>
+<constraintName>SYS_C0014580</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BC826516-4F88-4D5E-F2EB-F001F31BC6F5" name="PK_AS_ENGINEERS">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>D2BBD639-14F7-F4C9-76D6-F4A7B76BDC57</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="468D7147-22B2-EA46-ED2C-8AFD59A2EA00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAFDD35E-8F8B-9578-E5B4-78C4858FF6CA" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="PK_AS_ENGINEERS">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>61CD3382-A675-693A-F7BF-D346BD7D7E86</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="468D7147-22B2-EA46-ED2C-8AFD59A2EA00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFF42BB9-8496-88FA-9F8A-D46D76E07BE4" name="FK_EMPLOYEE_TO_AS_ENGINEERS_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="468D7147-22B2-EA46-ED2C-8AFD59A2EA00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

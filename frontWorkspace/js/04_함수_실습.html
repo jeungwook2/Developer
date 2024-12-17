@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수실습</title>
+    <style>
+        #wrap{
+            width: 250px;
+            height: 370px;
+            border: 3px solid blue;
+            display: grid;
+            grid-template-rows: repeat(6,50px);
+            grid-template-columns: repeat(4,50px);
+            gap: 10px;
+            place-content: center center;
+            place-items: center center;
+        }
+        #wrap > div:first-child{
+            grid-column: span 4;
+            border: 1px solid black;
+            text-align: right;
+            line-height: 50px;
+            vertical-align: center;
+        }
+        #wrap > *{
+            width: 100%;
+            height: 100%;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>함수 실습</h1>
+    <hr>
+    <h2>계산기 만들기(내장 함수 사용)</h2>
+    <div id="wrap">
+        <div id="result"></div>
+        <button onclick="handleClick(this.innerHTML)">(</button>
+        <button onclick="handleClick(this.innerHTML)">)</button>
+        <button onclick="handleClick(this.innerHTML)">%</button>
+        <button onclick="handleClick(this.innerHTML)">AC</button>
+        <button onclick="handleClick(this.innerHTML)">7</button>
+        <button onclick="handleClick(this.innerHTML)">8</button>
+        <button onclick="handleClick(this.innerHTML)">9</button>
+        <button onclick="handleClick(this.innerHTML)">/</button>
+        <button onclick="handleClick(this.innerHTML)">4</button>
+        <button onclick="handleClick(this.innerHTML)">5</button>
+        <button onclick="handleClick(this.innerHTML)">6</button>
+        <button onclick="handleClick(this.innerHTML)">*</button>
+        <button onclick="handleClick(this.innerHTML)">1</button>
+        <button onclick="handleClick(this.innerHTML)">2</button>
+        <button onclick="handleClick(this.innerHTML)">3</button>
+        <button onclick="handleClick(this.innerHTML)">-</button>
+        <button onclick="handleClick(this.innerHTML)">0</button>
+        <button onclick="handleClick(this.innerHTML)">.</button>
+        <button onclick="handleClick(this.innerHTML)">=</button>
+        <button onclick="handleClick(this.innerHTML)">+</button>
+    </div>
+		
+    <script>
+        function handleClick(b){
+            const result = document.querySelector("#result");
+
+            if(b == 'AC'){
+				result.innerHTML = 0;
+			}else if(b == '='){
+				result.innerHTML = eval(result.innerHTML);
+			}else{
+				var str = b;
+				
+				if(result.innerHTML == '0'){
+					result.innerHTML = str;
+				}else{
+					result.innerHTML += str;
+				}
+			}
+        }
+    </script>
+
+</body>
+</html>

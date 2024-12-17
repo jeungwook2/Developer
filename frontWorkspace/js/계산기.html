@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 400px;
+            height: 600px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            border: 5px solid blue;
+            gap: 5px;
+            padding: 10px;
+    
+        }
+
+        .result{
+            grid-column: 1/5;
+            margin: 5px;
+            border: 1px solid black;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: right;
+            line-height: 100px;
+            vertical-align: center;
+        }
+
+        .container > *{
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="result"></div>
+        <button onclick="clickEvent(this.innerHTML)">(</button>
+        <button onclick="clickEvent(this.innerHTML)">)</button>
+        <button onclick="clickEvent(this.innerHTML)">%</button>
+        <button onclick="clickEvent(this.innerHTML)">AC</button>
+        <button onclick="clickEvent(this.innerHTML)">7</button>
+        <button onclick="clickEvent(this.innerHTML)">8</button>
+        <button onclick="clickEvent(this.innerHTML)">9</button>
+        <button onclick="clickEvent(this.innerHTML)">/</button>
+        <button onclick="clickEvent(this.innerHTML)">4</button>
+        <button onclick="clickEvent(this.innerHTML)">5</button>
+        <button onclick="clickEvent(this.innerHTML)">6</button>
+        <button onclick="clickEvent(this.innerHTML)">*</button>
+        <button onclick="clickEvent(this.innerHTML)">1</button>
+        <button onclick="clickEvent(this.innerHTML)">2</button>
+        <button onclick="clickEvent(this.innerHTML)">3</button>
+        <button onclick="clickEvent(this.innerHTML)">-</button>
+        <button onclick="clickEvent(this.innerHTML)">0</button>
+        <button onclick="clickEvent(this.innerHTML)">.</button>
+        <button onclick="clickEvent(this.innerHTML)">=</button>
+        <button onclick="clickEvent(this.innerHTML)">+</button>
+    </div>
+
+    <script>
+        function clickEvent(html){
+            let result = document.querySelector(".result");
+
+            if(html == 'AC'){
+                result.innerHTML = 0;
+            }else if(html == '='){
+                result.innerHTML = eval(result.innerHTML);
+            }else{
+				let str = html;
+				
+				if(result.innerHTML == '0'){
+					result.innerHTML = str;
+				}else{
+					result.innerHTML += str;
+				}
+			}
+        }
+
+    </script>
+</body>
+</html>

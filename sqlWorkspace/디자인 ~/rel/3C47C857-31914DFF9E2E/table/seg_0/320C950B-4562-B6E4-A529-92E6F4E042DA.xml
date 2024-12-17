@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="320C950B-4562-B6E4-A529-92E6F4E042DA" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="ATTENDANCE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>268EC9E2-1C5E-AF63-8971-294A4D7FA0E8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="7BD945DE-A11E-7DB8-4A1D-78AA5781F997">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[NO]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>70849099-6934-31F8-0D26-5E6559D15051</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMP_NO" id="117583F2-CAB6-91EB-BDD9-435CD1B3A9BD">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[사번]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>5C4E318F-A4A9-4622-1606-BFA8F9817393</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3DEB877E-CCFA-CB8B-21A6-4953AD74A382" referredColumn="B643C12D-C544-DE69-4F02-D9AC5F84E380"/>
+</associations>
+</Column>
+<Column name="CI_TIME" id="C363A468-7462-AC39-7E1B-6F976AC86D1A">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[출근시간]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>FC7E58D1-BC2A-32F0-CDCA-32FDC28282A7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO_TIME" id="B98E4B5A-35FB-20BF-324B-CF7696A55596">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[퇴근시간]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>0AF1505D-3AD9-C27A-EF2E-E84813B0AB58</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEL_YN" id="DEE150CF-050E-8BD8-0713-E3C8569765EF">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[삭제여부]]></commentInRDBMS>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>38B77811-090F-B97D-B64E-A869D6AE164C</importedID>
+<constraintName>SYS_C0014315</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE" id="60A999D0-F4BC-8A2A-4D5C-8ABEAE5B27D1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>4B8C9C2A-5A8F-D726-3A70-0EEB5590E830</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F14128EB-D71E-A4B2-87FF-10DCA5191D10" name="PK_ATTENDANCE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>DFBC339F-617B-9805-A7F9-4BA65CA90A8B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BD945DE-A11E-7DB8-4A1D-78AA5781F997"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24A50823-B6D4-4A70-7AA5-03FF8525E5CC" schemaObject="C21B8C3C-7C43-F5C3-9493-213EEEE9B94D" name="PK_ATTENDANCE">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>4AA7CF08-7301-DD31-5219-AA16BBA31FE2</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BD945DE-A11E-7DB8-4A1D-78AA5781F997"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="242AC464-DCFC-DD25-9A4F-EC3CCC94BD69" name="FK_EMPLOYEE_TO_ATTENDANCE_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="117583F2-CAB6-91EB-BDD9-435CD1B3A9BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

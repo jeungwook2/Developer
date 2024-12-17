@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7A4FB6D0-AF0D-14C4-0482-BD22BB5355F1" containerWithKeyObject="1D621778-B17C-754D-0E72-FB808CABC2A1" localFKIndex="034C6F9A-6563-C857-C9E5-FF17A9D9B647" name="FK_BANK_TO_EMPLOYEE_1">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-05 06:41:21 UTC</createdTime>
+<ownerDesignName>디자인 ~</ownerDesignName>
+<importedID>F97B5B2A-41C5-7382-0484-0B45ED1F8211</importedID>
+<referredTableLongName>C##SEMI2.BANK</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C376F1AC-1C6A-C626-18D9-78876E1DB2E2</referredTableID>
+<keyObject>D786EF23-4C7C-642D-839A-14C0B1E3617D</keyObject>
+<referredKeyID>D786EF23-4C7C-642D-839A-14C0B1E3617D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>NO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

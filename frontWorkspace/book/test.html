@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>프로미스 연습</h1>
+</body>
+</html>
+
+<script>
+    new Promise((resolve,reject)=>{
+       const num =prompt("숫자를 입력하세요");
+       if(num >0){
+        resolve(num);
+       }else{
+        reject(num);
+       }
+    }).then((data)=>{
+        
+        console.log("할일끝~~");
+        console.log(data);
+        throw new Error("메세지 ㅋㅋ");
+        return data;
+        
+    }).then((data)=>{
+        console.log("두번째 할일끝");
+        console.log(data);
+        return data;
+    }).then((data)=>{
+        console.log("세번째 할일끝");
+        console.log(data);
+    })
+    .catch((data)=>{
+        console.log("할일실패 ㅜㅜ");
+        console.log("data === ",data);
+        
+        
+    });
+ 
+ 
+</script>

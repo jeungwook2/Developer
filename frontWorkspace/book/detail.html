@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>디테일</h1>
+    <div id="list"></div>
+</body>
+</html>
+
+<script>
+    $.ajax({
+        url:"http://127.0.0.1:8888/book/listone?no=20",
+        method:"GET",
+        success:function(data){
+            const listTag =document.querySelector("#list");
+            console.log("통신성공");
+            console.log(data);
+
+                const noTag=document.createElement("span");
+                noTag.textContent = data.no;
+                const titleTag=document.createElement("span");
+                titleTag.textContent = data.title;
+                const writerTag=document.createElement("span");
+                writerTag.textContent= data.writer;
+                const priceTag=document.createElement("span");
+                priceTag.textContent= data.price;
+                const publishedDateTag=document.createElement("span");
+                publishedDateTag.textContent= data.publishedDate;
+
+                
+                listTag.appendChild(noTag);
+                listTag.appendChild(titleTag);
+                listTag.appendChild(writerTag);
+                listTag.appendChild(publishedDateTag);
+            
+        },
+        error:function(){
+            console.log("실패");
+        }
+    })
+</script>

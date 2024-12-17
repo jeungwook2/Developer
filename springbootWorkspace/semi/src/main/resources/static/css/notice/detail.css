@@ -1,0 +1,9 @@
+#reply-list-area{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 2fr 2fr;
+    grid-auto-rows: 30px;
+    background-color: lightgray;
+    border: 1px solid black;
+
+}
